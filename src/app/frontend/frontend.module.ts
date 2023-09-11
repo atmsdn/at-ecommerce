@@ -9,11 +9,13 @@ import { CartComponent } from './stacomponents/cart/cart.component';
 import { MenuComponent } from './stacomponents/menu/menu.component';
 import { ThemeComponent } from './stacomponents/theme/theme.component';
 import { MobileMenuComponent } from './stacomponents/mobile-menu/mobile-menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
-    FrontendComponent
+    FrontendComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
