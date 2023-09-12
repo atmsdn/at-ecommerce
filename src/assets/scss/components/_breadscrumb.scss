@@ -7,7 +7,7 @@
     overflow: hidden;
 
     .breadscrumb-contain {
-        padding: calc(26px + (40 - 26) * ((100vw - 320px) / (1920 - 320))) 0;
+        padding: calc(15px + (40 - 36) * ((100vw - 320px) / (1920 - 320))) 0;
         text-align: center;
         color: $title-color;
         font-family: $public-sans;
