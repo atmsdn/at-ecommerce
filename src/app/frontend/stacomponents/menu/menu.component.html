@@ -1,5 +1,3 @@
-
-
 <div class="container-fluid-lg">
     <div class="row">
         <div class="col-12">
@@ -26,75 +24,28 @@
                         </div>
 
                         <ul class="category-list">
-                            <li class="onhover-category-list">
+                            <li class="onhover-category-list" *ngFor="let category of categoryList;let i=index">
                                 <a href="javascript:void(0)" class="category-name">
                                     <img src="../assets/svg/1/vegetable.svg" alt="">
-                                    <h6>Vegetables &amp; Fruit</h6>
+                                    <h6>{{category.categoryName}}</h6>
                                     <i class="fa-solid fa-angle-right"></i>
                                 </a>
 
-                                <div class="onhover-category-box">
-                                    <div class="list-1">
+                                <div class="onhover-category-box" *ngIf="category?.subCategory">
+                                    <div class="list-{{i+1}}" *ngFor="let subCat of category?.subCategory;let i=index">
                                         <div class="category-title-box">
-                                            <h5>Organic Vegetables</h5>
+                                            <h5>{{subCat.categoryTitle}}</h5>
                                         </div>
-                                        <ul>
-                                            <li>
-                                                <a href="/category">Potato &amp; Tomato</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Cucumber &amp; Capsicum</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Leafy Vegetables</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Root Vegetables</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Beans &amp; Okra</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Cabbage &amp; Cauliflower</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Gourd &amp; Drumstick</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Specialty</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="list-2">
-                                        <div class="category-title-box">
-                                            <h5>Fresh Fruit</h5>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:void(0)">Banana &amp; Papaya</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Kiwi, Citrus Fruit</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Apples &amp; Pomegranate</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Seasonal Fruits</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Mangoes</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Fruit Baskets</a>
+                                        <ul *ngIf="subCat?.subCategoryList">
+                                            <li *ngFor="let subCat of subCat?.subCategoryList">
+                                                <a href="/category">{{subCat.categoryName}}</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
 
-                            <li class="onhover-category-list">
+                            <!-- <li class="onhover-category-list">
                                 <a href="javascript:void(0)" class="category-name">
                                     <img src="../assets/svg/1/cup.svg" alt="">
                                     <h6>Beverages</h6>
@@ -412,7 +363,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -433,39 +384,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="/">About Us</a>
                                     </li>
-                                    <!-- <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                            data-bs-toggle="dropdown">Shop</a>
-
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="shop-category-slider">Shop
-                                                    Category Slider</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-category">Shop
-                                                    Category Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-banner">Shop Banner</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-left-sidebar">Shop Left
-                                                    Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-list">Shop List</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-right-sidebar">Shop
-                                                    Right Sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="shop-top-filter">Shop Top
-                                                    Filter</a>
-                                            </li>
-                                        </ul>
-                                    </li> -->
 
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="javascript:void(0)"
