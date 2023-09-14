@@ -52,16 +52,13 @@
      var hoursSpan = clock?.querySelector('.hours');
      var minutesSpan = clock?.querySelector('.minutes');
      var secondsSpan = clock?.querySelector('.seconds');
-     if(!daysSpan){
-        return;
-     }
+    
      function updateClock() {
          var t = getTimeRemaining(endtime);
-
-         daysSpan?.innerHTML = t?.days;
-         hoursSpan?.innerHTML = ('0' + t?.hours).slice(-2);
-         minutesSpan?.innerHTML = ('0' + t?.minutes).slice(-2);
-         secondsSpan?.innerHTML = ('0' + t?.seconds).slice(-2);
+         daysSpan.innerHTML = t?.days;
+         hoursSpan.innerHTML = ('0' + t?.hours).slice(-2);
+         minutesSpan.innerHTML = ('0' + t?.minutes).slice(-2);
+         secondsSpan.innerHTML = ('0' + t?.seconds).slice(-2);
 
          if (t.total <= 0) {
              clearInterval(timeinterval);
@@ -75,4 +72,4 @@
  /***** SET A VALID END DATE *****/
  var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
  initializeClock('clockdiv-1', deadline);
-},1000);
+},1500);
