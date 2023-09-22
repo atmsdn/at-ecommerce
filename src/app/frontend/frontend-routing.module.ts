@@ -14,6 +14,7 @@ const routes: Routes = [
       { path: 'order-success', loadChildren: () => import('./order-success/order-success.module').then(m => m.OrderSuccessModule) },
       { path: 'order-tracking', loadChildren: () => import('./order-tracking/order-tracking.module').then(m => m.OrderTrackingModule) },
       { path: 'wishlist', loadChildren: () => import('./wishlist/wishlist.module').then(m => m.WishlistModule) },
+      { path: 'home2', loadChildren: () => import('./home-two/home-two.module').then(m => m.HomeTwoModule) },
     ]
   },
 ];
